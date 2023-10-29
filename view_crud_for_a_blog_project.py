@@ -17,9 +17,6 @@ from PIL import Image
 from django.contrib.auth.decorators import login_required
 from .models import Post, Like, Dislike, Comment
 
-
-
-
 def intro(request):
     return render(request, 'blog/intro.html')
 
