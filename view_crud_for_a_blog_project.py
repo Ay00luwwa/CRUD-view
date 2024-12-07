@@ -107,6 +107,7 @@ def search_view(request):
     query = request.GET.get('query', '')  # Default to an empty string if 'query' doesn't exist
     template_name = 'blog/search_results.html'
 
+    
     if query:
         category = Category.objects.filter(name__iexact=query).first()
         if category:
@@ -176,6 +177,8 @@ def users_profile(request, username):
         'profile_user': profile_user
     }
     return render(request, 'blog/profile.html', {'profile_user': profile_user})
+
+
 
 
 @login_required
